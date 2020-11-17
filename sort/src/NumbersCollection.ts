@@ -1,10 +1,14 @@
-export class NumbersCollection {
+import { Sorter } from "./Sorter";
+
+export class NumbersCollection extends Sorter {
   /* data: number[];
   constructor(data: number[]) {
     this.data = data;
   } */
-  // Equivalent to this ^^^ see: https://www.typescriptlang.org/docs/handbook/classes.html#public-private-and-protected-modifiers
-  constructor(public data: number[]) {}
+  // Equivalent to this (without super() call) ^^^ see: https://www.typescriptlang.org/docs/handbook/classes.html#public-private-and-protected-modifiers
+  constructor(public data: number[]) {
+    super();
+  }
 
   get length(): number {
     return this.data.length;
