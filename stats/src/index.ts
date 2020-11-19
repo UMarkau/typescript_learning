@@ -1,3 +1,7 @@
-const func = (v: number): number => v * 3;
+import { MatchReader } from "./MatchReader";
 
-console.log(func(8));
+const reader = new MatchReader("football.csv");
+
+reader.read();
+
+console.log(reader.data);
